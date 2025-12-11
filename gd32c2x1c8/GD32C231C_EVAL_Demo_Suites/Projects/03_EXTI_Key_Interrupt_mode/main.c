@@ -34,9 +34,12 @@ OF SUCH DAMAGE.
 
 #include "gd32c2x1.h"
 #include "systick.h"
+#include <stdio.h>
+#include "gd32c231c_eval.h"
 
-static void led_flash(uint8_t times);
 extern volatile uint8_t sleep_mode_flag;
+
+static void usart_config(void);
 
 /*!
     \brief      main function
@@ -48,6 +51,9 @@ int main(void)
 {
     systick_config();
 
+    usart_config();
+    printf("\r\nMCU Reset\r\n");
+
     /* enable the LED2 GPIO clock */
     rcu_periph_clock_enable(RCU_GPIOD);
     /* configure LED2 GPIO port */
@@ -55,9 +61,6 @@ int main(void)
     gpio_output_options_set(GPIOD, GPIO_OTYPE_PP, GPIO_OSPEED_LEVEL_1, GPIO_PIN_1);
     /* reset LED2 GPIO pin */
     gpio_bit_reset(GPIOD, GPIO_PIN_1);
-
-    /* flash the LED for test */
-    led_flash(1);
 
     /* enable the User key GPIO clock */
     rcu_periph_clock_enable(RCU_GPIOA);
@@ -86,16 +89,25 @@ int main(void)
     /* enable wakeup pin0 (PA0) */
     pmu_wakeup_pin_enable(PMU_WAKEUP_PIN0);
 
+    printf("\r\n======== APP start ========\r\n");
+
     while (1)
     {
+        // delay_1ms(1000);
+        // gpio_bit_set(GPIOD, GPIO_PIN_1);
+        // printf("Enter Deepsleep mode\r\n");
+        // pmu_to_deepsleepmode(WFI_CMD, PMU_DEEPSLEEP);
+
         /* check if need to enter sleep mode */
         if (sleep_mode_flag == 1)
         {
+            printf("\r\nEnter Deepsleep mode\r\n");
             pmu_to_deepsleepmode(WFI_CMD, PMU_DEEPSLEEP);
             // pmu_to_standbymode();
         }
         else
         {
+            printf("Enter Normal mode\r\n");
             /* normal running mode: blink LED */
             delay_1ms(1000);
             gpio_bit_set(GPIOA, GPIO_PIN_15);
@@ -106,24 +118,40 @@ int main(void)
 }
 
 /*!
-    \brief      flash the LED for test
-    \param[in]  times: times to flash the LED
+    \brief      usart configure
+    \param[in]  none
     \param[out] none
     \retval     none
 */
-static void led_flash(uint8_t times)
+static void usart_config(void)
 {
-    uint8_t i;
-    for (i = 0; i < times; i++)
-    {
-        /* delay 500 ms */
-        delay_1ms(500);
-        /* turn on the LED2 */
-        gpio_bit_set(GPIOD, GPIO_PIN_1);
+    /* enable GPIO clock */
+    rcu_periph_clock_enable(RCU_GPIOA);
 
-        /* delay 500 ms */
-        delay_1ms(500);
-        /* turn off the LED2 */
-        gpio_bit_reset(GPIOD, GPIO_PIN_1);
-    }
+    /* enable USART clock */
+    rcu_periph_clock_enable(RCU_USART0);
+
+    /* connect port to USART0 TX */
+    gpio_af_set(GPIOA, EVAL_COM_AF, GPIO_PIN_9);
+
+    /* connect port to USART1 RX */
+    gpio_af_set(GPIOA, EVAL_COM_AF, GPIO_PIN_10);
+
+    /* configure USART TX as alternate function push-pull */
+    gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_PULLUP, GPIO_PIN_9);
+    gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_LEVEL_1, GPIO_PIN_9);
+
+    /* configure USART RX as alternate function push-pull */
+    gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_PULLUP, GPIO_PIN_10);
+    gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_LEVEL_1, GPIO_PIN_10);
+
+    /* USART configure */
+    usart_deinit(USART0);
+    usart_word_length_set(USART0, USART_WL_8BIT);
+    usart_stop_bit_set(USART0, USART_STB_1BIT);
+    usart_parity_config(USART0, USART_PM_NONE);
+    usart_baudrate_set(USART0, 115200U);
+    usart_receive_config(USART0, USART_RECEIVE_ENABLE);
+    usart_transmit_config(USART0, USART_TRANSMIT_ENABLE);
+    usart_enable(USART0);
 }

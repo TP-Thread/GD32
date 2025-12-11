@@ -85270,30 +85270,30 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@F@led_flash",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void led_flash(uint8_t)",
-    "location": {
-      "column": "13",
-      "line": "38",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Projects\\03_EXTI_Key_Interrupt_mode\\main.c"
-    },
-    "name": "led_flash",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@sleep_mode_flag",
     "What": "Variable",
     "defdec": "Dec",
     "display": "sleep_mode_flag",
     "location": {
       "column": "25",
-      "line": "39",
+      "line": "40",
       "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Projects\\03_EXTI_Key_Interrupt_mode\\main.c"
     },
     "name": "sleep_mode_flag",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@F@usart_config",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_config(void)",
+    "location": {
+      "column": "13",
+      "line": "42",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Projects\\03_EXTI_Key_Interrupt_mode\\main.c"
+    },
+    "name": "usart_config",
     "origin": "project_file",
     "scope": null
   },
@@ -85304,7 +85304,7 @@
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "47",
+      "line": "50",
       "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Projects\\03_EXTI_Key_Interrupt_mode\\main.c"
     },
     "name": "main",
@@ -85312,366 +85312,16 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@F@led_flash",
+    "ID": "c:main.c@F@usart_config",
     "What": "Function",
     "defdec": "Def",
-    "display": "void led_flash(uint8_t)",
+    "display": "void usart_config(void)",
     "location": {
       "column": "13",
-      "line": "114",
+      "line": "126",
       "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Projects\\03_EXTI_Key_Interrupt_mode\\main.c"
     },
-    "name": "led_flash",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@4123@F@led_flash@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "13",
-      "line": "116",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Projects\\03_EXTI_Key_Interrupt_mode\\main.c"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@GPIO_PORT",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "GPIO_PORT",
-    "location": {
-      "column": "23",
-      "line": "38",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "GPIO_PORT",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@GPIO_PIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "GPIO_PIN",
-    "location": {
-      "column": "23",
-      "line": "40",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "GPIO_PIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@COM_CLK",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "COM_CLK",
-    "location": {
-      "column": "30",
-      "line": "42",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "COM_CLK",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@COM_TX_PIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "COM_TX_PIN",
-    "location": {
-      "column": "23",
-      "line": "44",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "COM_TX_PIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@COM_RX_PIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "COM_RX_PIN",
-    "location": {
-      "column": "23",
-      "line": "46",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "COM_RX_PIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@GPIO_CLK",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "GPIO_CLK",
-    "location": {
-      "column": "30",
-      "line": "48",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "GPIO_CLK",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@KEY_PORT",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "KEY_PORT",
-    "location": {
-      "column": "23",
-      "line": "50",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "KEY_PORT",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@KEY_PIN",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "KEY_PIN",
-    "location": {
-      "column": "23",
-      "line": "52",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "KEY_PIN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@KEY_CLK",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "KEY_CLK",
-    "location": {
-      "column": "30",
-      "line": "54",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "KEY_CLK",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@KEY_EXTI_LINE",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "KEY_EXTI_LINE",
-    "location": {
-      "column": "29",
-      "line": "56",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "KEY_EXTI_LINE",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@KEY_PORT_SOURCE",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "KEY_PORT_SOURCE",
-    "location": {
-      "column": "22",
-      "line": "58",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "KEY_PORT_SOURCE",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@KEY_PIN_SOURCE",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "KEY_PIN_SOURCE",
-    "location": {
-      "column": "22",
-      "line": "60",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "KEY_PIN_SOURCE",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@KEY_IRQn",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "KEY_IRQn",
-    "location": {
-      "column": "24",
-      "line": "62",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "KEY_IRQn",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@gd_eval_led_init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void gd_eval_led_init(led_typedef_enum)",
-    "location": {
-      "column": "6",
-      "line": "74",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "gd_eval_led_init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@gd_eval_led_on",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void gd_eval_led_on(led_typedef_enum)",
-    "location": {
-      "column": "6",
-      "line": "95",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "gd_eval_led_on",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@gd_eval_led_off",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void gd_eval_led_off(led_typedef_enum)",
-    "location": {
-      "column": "6",
-      "line": "110",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "gd_eval_led_off",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@gd_eval_led_toggle",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void gd_eval_led_toggle(led_typedef_enum)",
-    "location": {
-      "column": "6",
-      "line": "125",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "gd_eval_led_toggle",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@gd_eval_key_init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void gd_eval_key_init(key_typedef_enum, keymode_typedef_enum)",
-    "location": {
-      "column": "6",
-      "line": "141",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "gd_eval_key_init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@gd_eval_key_state_get",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t gd_eval_key_state_get(key_typedef_enum)",
-    "location": {
-      "column": "9",
-      "line": "169",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "gd_eval_key_state_get",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@gd_eval_com_init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void gd_eval_com_init(uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "181",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "gd_eval_com_init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@6583@F@gd_eval_com_init@com_id",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "com_id",
-    "location": {
-      "column": "14",
-      "line": "183",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "com_id",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@MyLowLevelPutchar",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "int MyLowLevelPutchar(int)",
-    "location": {
-      "column": "5",
-      "line": "232",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "MyLowLevelPutchar",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__write",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "size_t __write(int, const unsigned char *, size_t)",
-    "location": {
-      "column": "8",
-      "line": "241",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "__write",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:gd32c231c_eval.c@8650@F@__write@nChars",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "nChars",
-    "location": {
-      "column": "10",
-      "line": "245",
-      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
-    },
-    "name": "nChars",
+    "name": "usart_config",
     "origin": "project_file",
     "scope": null
   },
@@ -86810,398 +86460,6 @@
     "scope": null
   },
   {
-    "ID": "c:LowLevelIOInterface.h@159@macro@_LOWLEVELINTERFACE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LOWLEVELINTERFACE",
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LOWLEVELINTERFACE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@345@macro@_LLIO_ERROR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_ERROR",
-    "location": {
-      "column": "9",
-      "line": "15",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_ERROR",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@440@macro@_LLIO_STDIN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_STDIN",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_STDIN",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@464@macro@_LLIO_STDOUT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_STDOUT",
-    "location": {
-      "column": "9",
-      "line": "19",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_STDOUT",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@488@macro@_LLIO_STDERR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_STDERR",
-    "location": {
-      "column": "9",
-      "line": "20",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_STDERR",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@532@macro@_LLIO_RDONLY",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_RDONLY",
-    "location": {
-      "column": "9",
-      "line": "23",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_RDONLY",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@567@macro@_LLIO_WRONLY",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_WRONLY",
-    "location": {
-      "column": "9",
-      "line": "24",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_WRONLY",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@602@macro@_LLIO_RDWR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_RDWR",
-    "location": {
-      "column": "9",
-      "line": "25",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_RDWR",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@639@macro@_LLIO_RDWRMASK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_RDWRMASK",
-    "location": {
-      "column": "9",
-      "line": "27",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_RDWRMASK",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@717@macro@_LLIO_APPEND",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_APPEND",
-    "location": {
-      "column": "9",
-      "line": "29",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_APPEND",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@752@macro@_LLIO_TRUNC",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_TRUNC",
-    "location": {
-      "column": "9",
-      "line": "30",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_TRUNC",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@787@macro@_LLIO_CREAT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_CREAT",
-    "location": {
-      "column": "9",
-      "line": "31",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_CREAT",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@822@macro@_LLIO_EXCL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_EXCL",
-    "location": {
-      "column": "9",
-      "line": "32",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_EXCL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@859@macro@_LLIO_BINARY",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_BINARY",
-    "location": {
-      "column": "9",
-      "line": "34",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_BINARY",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LowLevelIOInterface.h@894@macro@_LLIO_TEXT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LLIO_TEXT",
-    "location": {
-      "column": "9",
-      "line": "35",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_LLIO_TEXT",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@__environ",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "__environ",
-    "location": {
-      "column": "38",
-      "line": "40",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "__environ",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__close",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int __close(int)",
-    "location": {
-      "column": "30",
-      "line": "42",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "__close",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__open",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int __open(const char *, int)",
-    "location": {
-      "column": "30",
-      "line": "43",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "__open",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@_exit",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void _exit(int)",
-    "location": {
-      "column": "30",
-      "line": "44",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_exit",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__exit",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void __exit(int)",
-    "location": {
-      "column": "30",
-      "line": "45",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "__exit",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__read",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t __read(int, unsigned char *, size_t)",
-    "location": {
-      "column": "30",
-      "line": "46",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "__read",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__write",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t __write(int, const unsigned char *, size_t)",
-    "location": {
-      "column": "30",
-      "line": "47",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "__write",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__dwrite",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t __dwrite(int, const unsigned char *, size_t)",
-    "location": {
-      "column": "30",
-      "line": "48",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "__dwrite",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__lseek",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "long __lseek(int, long, int)",
-    "location": {
-      "column": "30",
-      "line": "49",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "__lseek",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__getzone",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "const char * __getzone(void)",
-    "location": {
-      "column": "30",
-      "line": "50",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "__getzone",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__write_buffered",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t __write_buffered(int, const unsigned char *, size_t)",
-    "location": {
-      "column": "30",
-      "line": "51",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "__write_buffered",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@__cstart_closeall",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "__cstart_closeall",
-    "location": {
-      "column": "17",
-      "line": "56",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "__cstart_closeall",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@_Close_all",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void _Close_all(void)",
-    "location": {
-      "column": "8",
-      "line": "57",
-      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
-    },
-    "name": "_Close_all",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:gd32c231c_eval.h@1794@macro@GD32C231C_EVAL_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -87936,6 +87194,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@gd_eval_led_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void gd_eval_led_init(led_typedef_enum)",
+    "location": {
+      "column": "6",
+      "line": "118",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.h"
+    },
+    "name": "gd_eval_led_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@gd_eval_led_on",
     "What": "Function",
     "defdec": "Dec",
@@ -87946,6 +87218,34 @@
       "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.h"
     },
     "name": "gd_eval_led_on",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_led_on",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void gd_eval_led_on(led_typedef_enum)",
+    "location": {
+      "column": "6",
+      "line": "120",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.h"
+    },
+    "name": "gd_eval_led_on",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_led_off",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void gd_eval_led_off(led_typedef_enum)",
+    "location": {
+      "column": "6",
+      "line": "122",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.h"
+    },
+    "name": "gd_eval_led_off",
     "origin": "user_include",
     "scope": null
   },
@@ -87978,6 +87278,34 @@
     "scope": null
   },
   {
+    "ID": "c:@F@gd_eval_led_toggle",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void gd_eval_led_toggle(led_typedef_enum)",
+    "location": {
+      "column": "6",
+      "line": "124",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.h"
+    },
+    "name": "gd_eval_led_toggle",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_key_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void gd_eval_key_init(key_typedef_enum, keymode_typedef_enum)",
+    "location": {
+      "column": "6",
+      "line": "126",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.h"
+    },
+    "name": "gd_eval_key_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@gd_eval_key_init",
     "What": "Function",
     "defdec": "Dec",
@@ -88002,6 +87330,34 @@
       "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.h"
     },
     "name": "gd_eval_key_state_get",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_key_state_get",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t gd_eval_key_state_get(key_typedef_enum)",
+    "location": {
+      "column": "9",
+      "line": "128",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.h"
+    },
+    "name": "gd_eval_key_state_get",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_com_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void gd_eval_com_init(uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "130",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.h"
+    },
+    "name": "gd_eval_com_init",
     "origin": "user_include",
     "scope": null
   },
@@ -88100,6 +87456,734 @@
       "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\ysizet.h"
     },
     "name": "__data_size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@GPIO_PORT",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "GPIO_PORT",
+    "location": {
+      "column": "23",
+      "line": "38",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "GPIO_PORT",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@GPIO_PIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "GPIO_PIN",
+    "location": {
+      "column": "23",
+      "line": "40",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "GPIO_PIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@COM_CLK",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "COM_CLK",
+    "location": {
+      "column": "30",
+      "line": "42",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "COM_CLK",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@COM_TX_PIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "COM_TX_PIN",
+    "location": {
+      "column": "23",
+      "line": "44",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "COM_TX_PIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@COM_RX_PIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "COM_RX_PIN",
+    "location": {
+      "column": "23",
+      "line": "46",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "COM_RX_PIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@GPIO_CLK",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "GPIO_CLK",
+    "location": {
+      "column": "30",
+      "line": "48",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "GPIO_CLK",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@KEY_PORT",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "KEY_PORT",
+    "location": {
+      "column": "23",
+      "line": "50",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "KEY_PORT",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@KEY_PIN",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "KEY_PIN",
+    "location": {
+      "column": "23",
+      "line": "52",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "KEY_PIN",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@KEY_CLK",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "KEY_CLK",
+    "location": {
+      "column": "30",
+      "line": "54",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "KEY_CLK",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@KEY_EXTI_LINE",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "KEY_EXTI_LINE",
+    "location": {
+      "column": "29",
+      "line": "56",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "KEY_EXTI_LINE",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@KEY_PORT_SOURCE",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "KEY_PORT_SOURCE",
+    "location": {
+      "column": "22",
+      "line": "58",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "KEY_PORT_SOURCE",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@KEY_PIN_SOURCE",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "KEY_PIN_SOURCE",
+    "location": {
+      "column": "22",
+      "line": "60",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "KEY_PIN_SOURCE",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@KEY_IRQn",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "KEY_IRQn",
+    "location": {
+      "column": "24",
+      "line": "62",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "KEY_IRQn",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_led_init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void gd_eval_led_init(led_typedef_enum)",
+    "location": {
+      "column": "6",
+      "line": "74",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "gd_eval_led_init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_led_on",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void gd_eval_led_on(led_typedef_enum)",
+    "location": {
+      "column": "6",
+      "line": "95",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "gd_eval_led_on",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_led_off",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void gd_eval_led_off(led_typedef_enum)",
+    "location": {
+      "column": "6",
+      "line": "110",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "gd_eval_led_off",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_led_toggle",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void gd_eval_led_toggle(led_typedef_enum)",
+    "location": {
+      "column": "6",
+      "line": "125",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "gd_eval_led_toggle",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_key_init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void gd_eval_key_init(key_typedef_enum, keymode_typedef_enum)",
+    "location": {
+      "column": "6",
+      "line": "141",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "gd_eval_key_init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_key_state_get",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t gd_eval_key_state_get(key_typedef_enum)",
+    "location": {
+      "column": "9",
+      "line": "169",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "gd_eval_key_state_get",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@gd_eval_com_init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void gd_eval_com_init(uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "181",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "gd_eval_com_init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@6583@F@gd_eval_com_init@com_id",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "com_id",
+    "location": {
+      "column": "14",
+      "line": "183",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "com_id",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@MyLowLevelPutchar",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int MyLowLevelPutchar(int)",
+    "location": {
+      "column": "5",
+      "line": "232",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "MyLowLevelPutchar",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__write",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "size_t __write(int, const unsigned char *, size_t)",
+    "location": {
+      "column": "8",
+      "line": "241",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "__write",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:gd32c231c_eval.c@8650@F@__write@nChars",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "nChars",
+    "location": {
+      "column": "10",
+      "line": "245",
+      "path": "E:\\RTOS\\GD32\\gd32c2x1c8\\GD32C231C_EVAL_Demo_Suites\\Utilities\\gd32c231c_eval.c"
+    },
+    "name": "nChars",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@159@macro@_LOWLEVELINTERFACE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LOWLEVELINTERFACE",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LOWLEVELINTERFACE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@345@macro@_LLIO_ERROR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_ERROR",
+    "location": {
+      "column": "9",
+      "line": "15",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_ERROR",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@440@macro@_LLIO_STDIN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_STDIN",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_STDIN",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@464@macro@_LLIO_STDOUT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_STDOUT",
+    "location": {
+      "column": "9",
+      "line": "19",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_STDOUT",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@488@macro@_LLIO_STDERR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_STDERR",
+    "location": {
+      "column": "9",
+      "line": "20",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_STDERR",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@532@macro@_LLIO_RDONLY",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_RDONLY",
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_RDONLY",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@567@macro@_LLIO_WRONLY",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_WRONLY",
+    "location": {
+      "column": "9",
+      "line": "24",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_WRONLY",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@602@macro@_LLIO_RDWR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_RDWR",
+    "location": {
+      "column": "9",
+      "line": "25",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_RDWR",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@639@macro@_LLIO_RDWRMASK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_RDWRMASK",
+    "location": {
+      "column": "9",
+      "line": "27",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_RDWRMASK",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@717@macro@_LLIO_APPEND",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_APPEND",
+    "location": {
+      "column": "9",
+      "line": "29",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_APPEND",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@752@macro@_LLIO_TRUNC",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_TRUNC",
+    "location": {
+      "column": "9",
+      "line": "30",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_TRUNC",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@787@macro@_LLIO_CREAT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_CREAT",
+    "location": {
+      "column": "9",
+      "line": "31",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_CREAT",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@822@macro@_LLIO_EXCL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_EXCL",
+    "location": {
+      "column": "9",
+      "line": "32",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_EXCL",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@859@macro@_LLIO_BINARY",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_BINARY",
+    "location": {
+      "column": "9",
+      "line": "34",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_BINARY",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LowLevelIOInterface.h@894@macro@_LLIO_TEXT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_LLIO_TEXT",
+    "location": {
+      "column": "9",
+      "line": "35",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_LLIO_TEXT",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@__environ",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "__environ",
+    "location": {
+      "column": "38",
+      "line": "40",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "__environ",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__close",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int __close(int)",
+    "location": {
+      "column": "30",
+      "line": "42",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "__close",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__open",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int __open(const char *, int)",
+    "location": {
+      "column": "30",
+      "line": "43",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "__open",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@_exit",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void _exit(int)",
+    "location": {
+      "column": "30",
+      "line": "44",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_exit",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__exit",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void __exit(int)",
+    "location": {
+      "column": "30",
+      "line": "45",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "__exit",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__read",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t __read(int, unsigned char *, size_t)",
+    "location": {
+      "column": "30",
+      "line": "46",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "__read",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__write",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t __write(int, const unsigned char *, size_t)",
+    "location": {
+      "column": "30",
+      "line": "47",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "__write",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__dwrite",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t __dwrite(int, const unsigned char *, size_t)",
+    "location": {
+      "column": "30",
+      "line": "48",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "__dwrite",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__lseek",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "long __lseek(int, long, int)",
+    "location": {
+      "column": "30",
+      "line": "49",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "__lseek",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__getzone",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "const char * __getzone(void)",
+    "location": {
+      "column": "30",
+      "line": "50",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "__getzone",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__write_buffered",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t __write_buffered(int, const unsigned char *, size_t)",
+    "location": {
+      "column": "30",
+      "line": "51",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "__write_buffered",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@__cstart_closeall",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "__cstart_closeall",
+    "location": {
+      "column": "17",
+      "line": "56",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "__cstart_closeall",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@_Close_all",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void _Close_all(void)",
+    "location": {
+      "column": "8",
+      "line": "57",
+      "path": "D:\\EIDE\\IAR\\arm\\inc\\c\\LowLevelIOInterface.h"
+    },
+    "name": "_Close_all",
     "origin": "system_include",
     "scope": null
   },

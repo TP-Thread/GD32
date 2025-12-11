@@ -33,4 +33,6 @@ E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrup
   E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\..\..\..\..\GD32C2x1_Firmware_Library\GD32C2x1_standard_peripheral\Include\gd32c2x1_wwdgt.h \
   E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\..\..\..\..\GD32C2x1_Firmware_Library\CMSIS\GD\GD32C2x1\Include\gd32c2x1_err_report.h \
   E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\..\..\..\..\GD32C2x1_Firmware_Library\CMSIS\GD\GD32C2x1\Include\gd32c2x1.h \
-  E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\systick.h
+  E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\systick.h \
+  D:\EIDE\IAR\arm\inc\c\stdio.h D:\EIDE\IAR\arm\inc\c\ysizet.h \
+  E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\..\..\..\Utilities\gd32c231c_eval.h
