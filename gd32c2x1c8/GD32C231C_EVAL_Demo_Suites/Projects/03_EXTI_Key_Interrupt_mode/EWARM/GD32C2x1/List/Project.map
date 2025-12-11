@@ -1,0 +1,379 @@
+###############################################################################
+#
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  11/Dec/2025  14:17:38
+# Copyright 2007-2022 IAR Systems AB.
+#
+#    Output file  =
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Exe\Project.out
+#    Map file     =
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\List\Project.map
+#    Command line =
+#        -f
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Exe\Project.out.rsp
+#        (E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_EVAL\gd32c231c_eval.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_adc.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_cmp.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_crc.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_dbg.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_dma.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\CMSIS\gd32c2x1_err_report.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_exti.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_fmc.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_fwdgt.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_gpio.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_i2c.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\Application\gd32c2x1_it.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_misc.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_pmu.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_rcu.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_rtc.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_spi.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_syscfg.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_timer.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_usart.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_wwdgt.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\Application\main.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\Startup\startup_gd32c2x1.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\CMSIS\system_gd32c2x1.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\Application\systick.o
+#        --no_out_extension -o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Exe\Project.out
+#        --map
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\List\Project.map
+#        --config D:\EIDE\IAR\arm/config/linker/GD/GD32C231x8.icf --semihosting
+#        --entry __iar_program_start --vfe --text_out locale
+#        --cpu=Cortex-M23.no_se --fpu=None)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 32 { };
+define block HEAP with size = 1K, alignment = 32 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'2fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address   Size  Object
+  -------            ----         -------   ----  ------
+"A0":                                       0xdc
+  .intvec            ro code   0x800'0000   0xdc  startup_gd32c2x1.o [5]
+                             - 0x800'00dc   0xdc
+
+"P1":                                      0x8ec
+  .text              ro code   0x800'00dc  0x128  main.o [1]
+  .text              ro code   0x800'0204  0x100  systick.o [1]
+  .text              ro code   0x800'0304   0x40  gd32c2x1_rcu.o [4]
+  .text              ro code   0x800'0344  0x102  gd32c2x1_gpio.o [4]
+  .text              ro code   0x800'0448   0xd0  gd32c2x1_misc.o [4]
+  .text              ro code   0x800'0518   0x98  gd32c2x1_syscfg.o [4]
+  .text              ro code   0x800'05b0   0xb4  gd32c2x1_exti.o [4]
+  .text              ro code   0x800'0664   0x74  gd32c2x1_pmu.o [4]
+  .text              ro code   0x800'06d8   0xd8  system_gd32c2x1.o [2]
+  .text              ro code   0x800'07b0   0x70  gd32c2x1_it.o [1]
+  .text              ro code   0x800'0820   0x38  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0858   0x30  copy_init3.o [7]
+  .text              ro code   0x800'0888   0x28  data_init.o [7]
+  .iar.init_table    const     0x800'08b0   0x14  - Linker created -
+  .text              ro code   0x800'08c4   0x1e  cmain.o [7]
+  .text              ro code   0x800'08e2    0x4  low_level_init.o [6]
+  .text              ro code   0x800'08e6    0x8  exit.o [6]
+  .text              ro code   0x800'08f0    0xa  cexit.o [7]
+  .text              ro code   0x800'08fc   0x14  exit.o [8]
+  .text              ro code   0x800'0910   0x1c  cstartup_M.o [7]
+  Initializer bytes  const     0x800'092c    0xc  <for P2-1>
+  .text              ro code   0x800'0938    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'093c    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0940    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0944    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0948    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'094c    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0950    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0954    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0958    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'095c    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0960    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0964    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0968    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'096c    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0970    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0974    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0978    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'097c    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0980    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0984    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0988    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'098c    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0990    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0994    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0998    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'099c    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'09a0    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'09a4    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'09a8    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'09ac    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'09b0    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'09b4    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'09b8    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'09bc    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'09c0    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'09c4    0x4  startup_gd32c2x1.o [5]
+  .rodata            const     0x800'09c8    0x0  copy_init3.o [7]
+                             - 0x800'09c8  0x8ec
+
+"P2", part 1 of 2:                           0xc
+  P2-1                        0x2000'0000    0x9  <Init block>
+    .data            inited   0x2000'0000    0x4  system_gd32c2x1.o [2]
+    .bss             inited   0x2000'0004    0x4  systick.o [1]
+    .bss             inited   0x2000'0008    0x1  gd32c2x1_it.o [1]
+                            - 0x2000'0009    0x9
+
+"P2", part 2 of 2:                         0x400
+  CSTACK                      0x2000'0020  0x400  <Block>
+    CSTACK           uninit   0x2000'0020  0x400  <Block tail>
+                            - 0x2000'0420  0x400
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'09c8   0x800'ffff  0xf638
+  0x2000'000c  0x2000'001f    0x14
+  0x2000'0420  0x2000'2fff  0x2be0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0xc (133% of destination):
+           0x800'092c   0xc
+    1 destination range, total size 0x9:
+          0x2000'0000   0x9
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module              ro code  ro data  rw data
+    ------              -------  -------  -------
+command line/config:
+    ---------------------------------------------
+    Total:
+
+E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\Application: [1]
+    gd32c2x1_it.o           112        1        1
+    main.o                  296
+    systick.o               256        4        4
+    ---------------------------------------------
+    Total:                  664        5        5
+
+E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\CMSIS: [2]
+    system_gd32c2x1.o       216        4        4
+    ---------------------------------------------
+    Total:                  216        4        4
+
+E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_EVAL: [3]
+    ---------------------------------------------
+    Total:
+
+E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals: [4]
+    gd32c2x1_exti.o         180
+    gd32c2x1_gpio.o         258
+    gd32c2x1_misc.o         208
+    gd32c2x1_pmu.o          116
+    gd32c2x1_rcu.o           64
+    gd32c2x1_syscfg.o       152
+    ---------------------------------------------
+    Total:                  978
+
+E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\Startup: [5]
+    startup_gd32c2x1.o      420
+    ---------------------------------------------
+    Total:                  420
+
+dl6M_tlf.a: [6]
+    exit.o                    8
+    low_level_init.o          4
+    ---------------------------------------------
+    Total:                   12
+
+rt6M_tl.a: [7]
+    cexit.o                  10
+    cmain.o                  30
+    copy_init3.o             48
+    cstartup_M.o             28
+    data_init.o              40
+    ---------------------------------------------
+    Total:                  156
+
+shb_l.a: [8]
+    exit.o                   20
+    ---------------------------------------------
+    Total:                   20
+
+    Gaps                      6
+    Linker created                    23    1'024
+-------------------------------------------------
+    Grand Total:          2'472       32    1'033
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+.iar.init_table$$Base    0x800'08b0         --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'08c4         --   Gb  - Linker created -
+?main                    0x800'08c5        Code  Gb  cmain.o [7]
+ADC_IRQHandler           0x800'0965        Code  Wk  startup_gd32c2x1.o [5]
+CMP0_IRQHandler          0x800'09b5        Code  Wk  startup_gd32c2x1.o [5]
+CMP1_IRQHandler          0x800'09b9        Code  Wk  startup_gd32c2x1.o [5]
+CSTACK$$Base            0x2000'0020         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0420         --   Gb  - Linker created -
+DMAMUX_IRQHandler        0x800'09b1        Code  Wk  startup_gd32c2x1.o [5]
+DMA_Channel0_IRQHandler
+                         0x800'0959        Code  Wk  startup_gd32c2x1.o [5]
+DMA_Channel1_IRQHandler
+                         0x800'095d        Code  Wk  startup_gd32c2x1.o [5]
+DMA_Channel2_IRQHandler
+                         0x800'0961        Code  Wk  startup_gd32c2x1.o [5]
+EXTI0_IRQHandler         0x800'0949        Code  Wk  startup_gd32c2x1.o [5]
+EXTI10_15_IRQHandler     0x800'09ad        Code  Wk  startup_gd32c2x1.o [5]
+EXTI1_IRQHandler         0x800'094d        Code  Wk  startup_gd32c2x1.o [5]
+EXTI2_IRQHandler         0x800'0951        Code  Wk  startup_gd32c2x1.o [5]
+EXTI3_IRQHandler         0x800'0955        Code  Wk  startup_gd32c2x1.o [5]
+EXTI4_IRQHandler         0x800'07db  0x3c  Code  Gb  gd32c2x1_it.o [1]
+EXTI5_9_IRQHandler       0x800'0991        Code  Wk  startup_gd32c2x1.o [5]
+FMC_IRQHandler           0x800'0941        Code  Wk  startup_gd32c2x1.o [5]
+HardFault_Handler        0x800'07cd   0x2  Code  Gb  gd32c2x1_it.o [1]
+I2C0_ER_IRQHandler       0x800'0979        Code  Wk  startup_gd32c2x1.o [5]
+I2C0_EV_IRQHandler       0x800'0975        Code  Wk  startup_gd32c2x1.o [5]
+I2C0_WKUP_IRQHandler     0x800'09bd        Code  Wk  startup_gd32c2x1.o [5]
+I2C1_ER_IRQHandler       0x800'0981        Code  Wk  startup_gd32c2x1.o [5]
+I2C1_EV_IRQHandler       0x800'097d        Code  Wk  startup_gd32c2x1.o [5]
+I2C1_WKUP_IRQHandler     0x800'09c1        Code  Wk  startup_gd32c2x1.o [5]
+NMI_Handler              0x800'07b1  0x1c  Code  Gb  gd32c2x1_it.o [1]
+PendSV_Handler           0x800'07d1   0x2  Code  Gb  gd32c2x1_it.o [1]
+RCU_IRQHandler           0x800'0945        Code  Wk  startup_gd32c2x1.o [5]
+RTC_Alarm_IRQHandler     0x800'098d        Code  Wk  startup_gd32c2x1.o [5]
+Region$$Table$$Base      0x800'08b0         --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'08c4         --   Gb  - Linker created -
+Reset_Handler            0x800'0821        Code  Wk  startup_gd32c2x1.o [5]
+SPI0_IRQHandler          0x800'0985        Code  Wk  startup_gd32c2x1.o [5]
+SPI1_IRQHandler          0x800'0989        Code  Wk  startup_gd32c2x1.o [5]
+SVC_Handler              0x800'07cf   0x2  Code  Gb  gd32c2x1_it.o [1]
+SysTick_Config           0x800'0279  0x30  Code  Lc  systick.o [1]
+SysTick_Handler          0x800'07d3   0x8  Code  Gb  gd32c2x1_it.o [1]
+SystemCoreClock         0x2000'0000   0x4  Data  Gb  system_gd32c2x1.o [2]
+SystemInit               0x800'06d9  0x4c  Code  Gb  system_gd32c2x1.o [2]
+TIMER0_Channel_IRQHandler
+                         0x800'0999        Code  Wk  startup_gd32c2x1.o [5]
+TIMER0_TRG_CMT_UP_BRK_IRQHandler
+                         0x800'0995        Code  Wk  startup_gd32c2x1.o [5]
+TIMER13_IRQHandler       0x800'09a1        Code  Wk  startup_gd32c2x1.o [5]
+TIMER15_IRQHandler       0x800'09a5        Code  Wk  startup_gd32c2x1.o [5]
+TIMER16_IRQHandler       0x800'09a9        Code  Wk  startup_gd32c2x1.o [5]
+TIMER2_IRQHandler        0x800'099d        Code  Wk  startup_gd32c2x1.o [5]
+TIMESTAMP_IRQHandler     0x800'093d        Code  Wk  startup_gd32c2x1.o [5]
+USART0_IRQHandler        0x800'0969        Code  Wk  startup_gd32c2x1.o [5]
+USART0_WKUP_IRQHandler   0x800'09c5        Code  Wk  startup_gd32c2x1.o [5]
+USART1_IRQHandler        0x800'096d        Code  Wk  startup_gd32c2x1.o [5]
+USART2_IRQHandler        0x800'0971        Code  Wk  startup_gd32c2x1.o [5]
+WWDGT_IRQHandler         0x800'0939        Code  Wk  startup_gd32c2x1.o [5]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'2fff        Data  Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000        Data  Gb  <internal module>
+__NVIC_EnableIRQ         0x800'0449  0x1c  Code  Lc  gd32c2x1_misc.o [4]
+__NVIC_SetPriority       0x800'0465  0x74  Code  Lc  gd32c2x1_misc.o [4]
+__NVIC_SetPriority       0x800'0205  0x74  Code  Lc  systick.o [1]
+__cmain                  0x800'08c5        Code  Gb  cmain.o [7]
+__exit                   0x800'08fd  0x14  Code  Gb  exit.o [8]
+__iar_copy_init3         0x800'0859  0x30  Code  Gb  copy_init3.o [7]
+__iar_data_init3         0x800'0889  0x28  Code  Gb  data_init.o [7]
+__iar_program_start      0x800'0911        Code  Gb  cstartup_M.o [7]
+__low_level_init         0x800'08e3   0x4  Code  Gb  low_level_init.o [6]
+__vector_table           0x800'0000        Data  Gb  startup_gd32c2x1.o [5]
+_call_main               0x800'08d1        Code  Gb  cmain.o [7]
+_exit                    0x800'08f1        Code  Gb  cexit.o [7]
+delay                   0x2000'0004   0x4  Data  Lc  systick.o [1]
+delay_1ms                0x800'02cd   0xc  Code  Gb  systick.o [1]
+delay_decrement          0x800'02d9  0x10  Code  Gb  systick.o [1]
+exit                     0x800'08e7   0x8  Code  Gb  exit.o [6]
+exti_init                0x800'05b1  0x7e  Code  Gb  gd32c2x1_exti.o [4]
+exti_interrupt_flag_clear
+                         0x800'0647   0x6  Code  Gb  gd32c2x1_exti.o [4]
+exti_interrupt_flag_get
+                         0x800'062f  0x18  Code  Gb  gd32c2x1_exti.o [4]
+gpio_bit_reset           0x800'0413   0x8  Code  Gb  gd32c2x1_gpio.o [4]
+gpio_bit_set             0x800'040b   0x8  Code  Gb  gd32c2x1_gpio.o [4]
+gpio_bit_write           0x800'041b  0x16  Code  Gb  gd32c2x1_gpio.o [4]
+gpio_input_bit_get       0x800'0431  0x16  Code  Gb  gd32c2x1_gpio.o [4]
+gpio_mode_set            0x800'0345  0x62  Code  Gb  gd32c2x1_gpio.o [4]
+gpio_output_options_set
+                         0x800'03a7  0x64  Code  Gb  gd32c2x1_gpio.o [4]
+led_flash                0x800'01c3  0x3a  Code  Lc  main.o [1]
+main                     0x800'00dd  0xe6  Code  Gb  main.o [1]
+nvic_irq_enable          0x800'04d9  0x1c  Code  Gb  gd32c2x1_misc.o [4]
+nvic_vector_table_set    0x800'04f5  0x10  Code  Gb  gd32c2x1_misc.o [4]
+pmu_to_standbymode       0x800'0665  0x40  Code  Gb  gd32c2x1_pmu.o [4]
+pmu_wakeup_pin_enable    0x800'06a5  0x10  Code  Gb  gd32c2x1_pmu.o [4]
+rcu_irc48mdiv_sys_clock_config
+                         0x800'032b  0x12  Code  Gb  gd32c2x1_rcu.o [4]
+rcu_periph_clock_enable
+                         0x800'0305  0x26  Code  Gb  gd32c2x1_rcu.o [4]
+sleep_mode_flag         0x2000'0008   0x1  Data  Gb  gd32c2x1_it.o [1]
+syscfg_exti_line_config
+                         0x800'0519  0x6c  Code  Gb  gd32c2x1_syscfg.o [4]
+syscfg_interrupt_flag_get
+                         0x800'0585  0x18  Code  Gb  gd32c2x1_syscfg.o [4]
+system_clock_config      0x800'0725   0x8  Code  Lc  system_gd32c2x1.o [2]
+system_clock_irc48m      0x800'072d  0x62  Code  Lc  system_gd32c2x1.o [2]
+systick_config           0x800'02a9  0x24  Code  Gb  systick.o [1]
+
+
+[1] = E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\Application
+[2] = E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\CMSIS
+[3] = E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_EVAL
+[4] = E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals
+[5] = E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\03_EXTI_Key_Interrupt_mode\EWARM\GD32C2x1\Obj\Startup
+[6] = dl6M_tlf.a
+[7] = rt6M_tl.a
+[8] = shb_l.a
+
+  2'472 bytes of readonly  code memory
+     32 bytes of readonly  data memory
+  1'033 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

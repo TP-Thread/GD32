@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+ldfile.code.location=FLASH
+ldfile.flash.Origin=0x08000000
+ldfile.flash.length=64
+ldfile.ram.Origin=0x20000000
+ldfile.ram.length=12
+ldfile.src.path=D\:\\EIDE\\GD32EmbeddedBuilder\\plugins\\com.gigadevice.templatefwlib.arm.gd32c2x1_1.0.0.202509171114\\Firmware\\gd32c2x1_flash.ld
+ldfile.stack.Origin=0x20001000
+ldfile.stack.length=1
+ldfile.target.path=E\:\\MCU\\GD32\\gd32c231c8\\gd32c231c8\\ldscripts\\gd32c2x1_flash.ld
+mcu.target=GD32C231C8T6
+mcu.target.svd=GD32C231.svd

@@ -1,0 +1,6 @@
+15:30:00 **** Build of configuration GD ARM MCU Debug for project gd32c231c8 ****
+make -j20 all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[D:/EIDE\Tools\Build Tools\2.10-20180103-1919\bin;D:/EIDE\Tools\GNU Tools ARM Embedded\xpack-arm-none-eabi-gcc\9.2.1-1.1\bin;D:/EIDE/GD32EmbeddedBuilder//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143/jre/bin/server;D:/EIDE/GD32EmbeddedBuilder//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.10.v20240120-1143/jre/bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\Roborock\AppData\Local\Microsoft\WindowsApps;D:\EIDE\Code\bin;D:\Roborock\rradb;D:\Roborock\adb\platform-tools;;D:\EIDE\GD32EmbeddedBuilder]

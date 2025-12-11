@@ -1,0 +1,359 @@
+###############################################################################
+#
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  11/Dec/2025  09:56:36
+# Copyright 2007-2022 IAR Systems AB.
+#
+#    Output file  =
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Exe\Project.out
+#    Map file     =
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\List\Project.map
+#    Command line =
+#        -f
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Exe\Project.out.rsp
+#        (E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_EVAL\gd32c231c_eval.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_adc.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_cmp.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_crc.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_dbg.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_dma.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\CMSIS\gd32c2x1_err_report.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_exti.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_fmc.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_fwdgt.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_gpio.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_i2c.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\Application\gd32c2x1_it.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_misc.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_pmu.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_rcu.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_rtc.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_spi.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_syscfg.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_timer.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_usart.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals\gd32c2x1_wwdgt.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\Application\main.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\Startup\startup_gd32c2x1.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\CMSIS\system_gd32c2x1.o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\Application\systick.o
+#        --no_out_extension -o
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Exe\Project.out
+#        --map
+#        E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\List\Project.map
+#        --config D:\EIDE\IAR\arm/config/linker/GD/GD32C231x8.icf --semihosting
+#        --entry __iar_program_start --vfe --text_out locale
+#        --cpu=Cortex-M23.no_se --fpu=None)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 32 { };
+define block HEAP with size = 1K, alignment = 32 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'2fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address   Size  Object
+  -------            ----         -------   ----  ------
+"A0":                                       0xdc
+  .intvec            ro code   0x800'0000   0xdc  startup_gd32c2x1.o [5]
+                             - 0x800'00dc   0xdc
+
+"P1":                                      0x654
+  .text              ro code   0x800'00dc  0x15c  main.o [1]
+  .text              ro code   0x800'0238  0x100  systick.o [1]
+  .text              ro code   0x800'0338   0x40  gd32c2x1_rcu.o [4]
+  .text              ro code   0x800'0378   0xd6  gd32c2x1_gpio.o [4]
+  .text              ro code   0x800'0450   0xd8  system_gd32c2x1.o [2]
+  .text              ro code   0x800'0528   0x18  gd32c2x1_misc.o [4]
+  .text              ro code   0x800'0540   0x38  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0578   0x30  copy_init3.o [7]
+  .text              ro code   0x800'05a8   0x2a  gd32c2x1_it.o [1]
+  .text              ro code   0x800'05d4   0x1c  gd32c2x1_syscfg.o [4]
+  .text              ro code   0x800'05f0   0x28  data_init.o [7]
+  .iar.init_table    const     0x800'0618   0x14  - Linker created -
+  .text              ro code   0x800'062c   0x1e  cmain.o [7]
+  .text              ro code   0x800'064a    0x4  low_level_init.o [6]
+  .text              ro code   0x800'064e    0x8  exit.o [6]
+  .text              ro code   0x800'0658    0xa  cexit.o [7]
+  .text              ro code   0x800'0664   0x14  exit.o [8]
+  .text              ro code   0x800'0678   0x1c  cstartup_M.o [7]
+  Initializer bytes  const     0x800'0694    0x8  <for P2-1>
+  .text              ro code   0x800'069c    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06a0    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06a4    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06a8    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06ac    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06b0    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06b4    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06b8    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06bc    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06c0    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06c4    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06c8    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06cc    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06d0    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06d4    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06d8    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06dc    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06e0    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06e4    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06e8    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06ec    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06f0    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06f4    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06f8    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'06fc    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0700    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0704    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0708    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'070c    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0710    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0714    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0718    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'071c    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0720    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0724    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'0728    0x4  startup_gd32c2x1.o [5]
+  .text              ro code   0x800'072c    0x4  startup_gd32c2x1.o [5]
+  .rodata            const     0x800'0730    0x0  copy_init3.o [7]
+                             - 0x800'0730  0x654
+
+"P2", part 1 of 2:                           0x8
+  P2-1                        0x2000'0000    0x8  <Init block>
+    .data            inited   0x2000'0000    0x4  system_gd32c2x1.o [2]
+    .bss             inited   0x2000'0004    0x4  systick.o [1]
+                            - 0x2000'0008    0x8
+
+"P2", part 2 of 2:                         0x400
+  CSTACK                      0x2000'0020  0x400  <Block>
+    CSTACK           uninit   0x2000'0020  0x400  <Block tail>
+                            - 0x2000'0420  0x400
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'0730   0x800'ffff  0xf8d0
+  0x2000'0008  0x2000'001f    0x18
+  0x2000'0420  0x2000'2fff  0x2be0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x8:
+           0x800'0694   0x8
+    1 destination range, total size 0x8:
+          0x2000'0000   0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module              ro code  ro data  rw data
+    ------              -------  -------  -------
+command line/config:
+    ---------------------------------------------
+    Total:
+
+E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\Application: [1]
+    gd32c2x1_it.o            42
+    main.o                  348
+    systick.o               256        4        4
+    ---------------------------------------------
+    Total:                  646        4        4
+
+E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\CMSIS: [2]
+    system_gd32c2x1.o       216        4        4
+    ---------------------------------------------
+    Total:                  216        4        4
+
+E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_EVAL: [3]
+    ---------------------------------------------
+    Total:
+
+E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals: [4]
+    gd32c2x1_gpio.o         214
+    gd32c2x1_misc.o          24
+    gd32c2x1_rcu.o           64
+    gd32c2x1_syscfg.o        28
+    ---------------------------------------------
+    Total:                  330
+
+E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\Startup: [5]
+    startup_gd32c2x1.o      424
+    ---------------------------------------------
+    Total:                  424
+
+dl6M_tlf.a: [6]
+    exit.o                    8
+    low_level_init.o          4
+    ---------------------------------------------
+    Total:                   12
+
+rt6M_tl.a: [7]
+    cexit.o                  10
+    cmain.o                  30
+    copy_init3.o             48
+    cstartup_M.o             28
+    data_init.o              40
+    ---------------------------------------------
+    Total:                  156
+
+shb_l.a: [8]
+    exit.o                   20
+    ---------------------------------------------
+    Total:                   20
+
+    Gaps                      8
+    Linker created                    20    1'024
+-------------------------------------------------
+    Grand Total:          1'812       28    1'032
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'0618          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'062c          --   Gb  - Linker created -
+?main                    0x800'062d         Code  Gb  cmain.o [7]
+ADC_IRQHandler           0x800'06cd         Code  Wk  startup_gd32c2x1.o [5]
+CMP0_IRQHandler          0x800'071d         Code  Wk  startup_gd32c2x1.o [5]
+CMP1_IRQHandler          0x800'0721         Code  Wk  startup_gd32c2x1.o [5]
+CSTACK$$Base            0x2000'0020          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0420          --   Gb  - Linker created -
+DMAMUX_IRQHandler        0x800'0719         Code  Wk  startup_gd32c2x1.o [5]
+DMA_Channel0_IRQHandler
+                         0x800'06c1         Code  Wk  startup_gd32c2x1.o [5]
+DMA_Channel1_IRQHandler
+                         0x800'06c5         Code  Wk  startup_gd32c2x1.o [5]
+DMA_Channel2_IRQHandler
+                         0x800'06c9         Code  Wk  startup_gd32c2x1.o [5]
+EXTI0_IRQHandler         0x800'06ad         Code  Wk  startup_gd32c2x1.o [5]
+EXTI10_15_IRQHandler     0x800'0715         Code  Wk  startup_gd32c2x1.o [5]
+EXTI1_IRQHandler         0x800'06b1         Code  Wk  startup_gd32c2x1.o [5]
+EXTI2_IRQHandler         0x800'06b5         Code  Wk  startup_gd32c2x1.o [5]
+EXTI3_IRQHandler         0x800'06b9         Code  Wk  startup_gd32c2x1.o [5]
+EXTI4_IRQHandler         0x800'06bd         Code  Wk  startup_gd32c2x1.o [5]
+EXTI5_9_IRQHandler       0x800'06f9         Code  Wk  startup_gd32c2x1.o [5]
+FMC_IRQHandler           0x800'06a5         Code  Wk  startup_gd32c2x1.o [5]
+HardFault_Handler        0x800'05c5    0x2  Code  Gb  gd32c2x1_it.o [1]
+I2C0_ER_IRQHandler       0x800'06e1         Code  Wk  startup_gd32c2x1.o [5]
+I2C0_EV_IRQHandler       0x800'06dd         Code  Wk  startup_gd32c2x1.o [5]
+I2C0_WKUP_IRQHandler     0x800'0725         Code  Wk  startup_gd32c2x1.o [5]
+I2C1_ER_IRQHandler       0x800'06e9         Code  Wk  startup_gd32c2x1.o [5]
+I2C1_EV_IRQHandler       0x800'06e5         Code  Wk  startup_gd32c2x1.o [5]
+I2C1_WKUP_IRQHandler     0x800'0729         Code  Wk  startup_gd32c2x1.o [5]
+NMI_Handler              0x800'05a9   0x1c  Code  Gb  gd32c2x1_it.o [1]
+PendSV_Handler           0x800'05c9    0x2  Code  Gb  gd32c2x1_it.o [1]
+RCU_IRQHandler           0x800'06a9         Code  Wk  startup_gd32c2x1.o [5]
+RTC_Alarm_IRQHandler     0x800'06f5         Code  Wk  startup_gd32c2x1.o [5]
+Region$$Table$$Base      0x800'0618          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'062c          --   Gb  - Linker created -
+Reset_Handler            0x800'0541         Code  Wk  startup_gd32c2x1.o [5]
+SPI0_IRQHandler          0x800'06ed         Code  Wk  startup_gd32c2x1.o [5]
+SPI1_IRQHandler          0x800'06f1         Code  Wk  startup_gd32c2x1.o [5]
+SVC_Handler              0x800'05c7    0x2  Code  Gb  gd32c2x1_it.o [1]
+SysTick_Config           0x800'02ad   0x30  Code  Lc  systick.o [1]
+SysTick_Handler          0x800'05cb    0x8  Code  Gb  gd32c2x1_it.o [1]
+SystemCoreClock         0x2000'0000    0x4  Data  Gb  system_gd32c2x1.o [2]
+SystemInit               0x800'0451   0x4c  Code  Gb  system_gd32c2x1.o [2]
+TIMER0_Channel_IRQHandler
+                         0x800'0701         Code  Wk  startup_gd32c2x1.o [5]
+TIMER0_TRG_CMT_UP_BRK_IRQHandler
+                         0x800'06fd         Code  Wk  startup_gd32c2x1.o [5]
+TIMER13_IRQHandler       0x800'0709         Code  Wk  startup_gd32c2x1.o [5]
+TIMER15_IRQHandler       0x800'070d         Code  Wk  startup_gd32c2x1.o [5]
+TIMER16_IRQHandler       0x800'0711         Code  Wk  startup_gd32c2x1.o [5]
+TIMER2_IRQHandler        0x800'0705         Code  Wk  startup_gd32c2x1.o [5]
+TIMESTAMP_IRQHandler     0x800'06a1         Code  Wk  startup_gd32c2x1.o [5]
+USART0_IRQHandler        0x800'06d1         Code  Wk  startup_gd32c2x1.o [5]
+USART0_WKUP_IRQHandler   0x800'072d         Code  Wk  startup_gd32c2x1.o [5]
+USART1_IRQHandler        0x800'06d5         Code  Wk  startup_gd32c2x1.o [5]
+USART2_IRQHandler        0x800'06d9         Code  Wk  startup_gd32c2x1.o [5]
+WWDGT_IRQHandler         0x800'069d         Code  Wk  startup_gd32c2x1.o [5]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'2fff         Data  Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000         Data  Gb  <internal module>
+__NVIC_SetPriority       0x800'0239   0x74  Code  Lc  systick.o [1]
+__cmain                  0x800'062d         Code  Gb  cmain.o [7]
+__exit                   0x800'0665   0x14  Code  Gb  exit.o [8]
+__iar_copy_init3         0x800'0579   0x30  Code  Gb  copy_init3.o [7]
+__iar_data_init3         0x800'05f1   0x28  Code  Gb  data_init.o [7]
+__iar_program_start      0x800'0679         Code  Gb  cstartup_M.o [7]
+__low_level_init         0x800'064b    0x4  Code  Gb  low_level_init.o [6]
+__vector_table           0x800'0000         Data  Gb  startup_gd32c2x1.o [5]
+_call_main               0x800'0639         Code  Gb  cmain.o [7]
+_exit                    0x800'0659         Code  Gb  cexit.o [7]
+delay                   0x2000'0004    0x4  Data  Lc  systick.o [1]
+delay_1ms                0x800'0301    0xc  Code  Gb  systick.o [1]
+delay_decrement          0x800'030d   0x10  Code  Gb  systick.o [1]
+exit                     0x800'064f    0x8  Code  Gb  exit.o [6]
+gpio_bit_reset           0x800'0447    0x8  Code  Gb  gd32c2x1_gpio.o [4]
+gpio_bit_set             0x800'043f    0x8  Code  Gb  gd32c2x1_gpio.o [4]
+gpio_mode_set            0x800'0379   0x62  Code  Gb  gd32c2x1_gpio.o [4]
+gpio_output_options_set
+                         0x800'03db   0x64  Code  Gb  gd32c2x1_gpio.o [4]
+main                     0x800'00dd  0x15c  Code  Gb  main.o [1]
+nvic_vector_table_set    0x800'0529   0x10  Code  Gb  gd32c2x1_misc.o [4]
+rcu_irc48mdiv_sys_clock_config
+                         0x800'035f   0x12  Code  Gb  gd32c2x1_rcu.o [4]
+rcu_periph_clock_enable
+                         0x800'0339   0x26  Code  Gb  gd32c2x1_rcu.o [4]
+syscfg_interrupt_flag_get
+                         0x800'05d5   0x18  Code  Gb  gd32c2x1_syscfg.o [4]
+system_clock_config      0x800'049d    0x8  Code  Lc  system_gd32c2x1.o [2]
+system_clock_irc48m      0x800'04a5   0x62  Code  Lc  system_gd32c2x1.o [2]
+systick_config           0x800'02dd   0x24  Code  Gb  systick.o [1]
+
+
+[1] = E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\Application
+[2] = E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\CMSIS
+[3] = E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_EVAL
+[4] = E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\GD32C2x1_Peripherals
+[5] = E:\RTOS\GD32\gd32c2x1c8\GD32C231C_EVAL_Demo_Suites\Projects\01_GPIO_Running_LED\EWARM\GD32C2x1\Obj\Startup
+[6] = dl6M_tlf.a
+[7] = rt6M_tl.a
+[8] = shb_l.a
+
+  1'812 bytes of readonly  code memory
+     28 bytes of readonly  data memory
+  1'032 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
