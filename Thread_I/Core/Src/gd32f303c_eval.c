@@ -1,12 +1,12 @@
 /*!
-    \file  gd32f303b_eval.c
-    \brief firmware functions to manage leds, keys, COM ports
+    \file    gd32f303c_eval.c
+    \brief   firmware functions to manage leds, keys, COM ports
 
     \version 2025-08-20, V3.0.2, demo for GD32F30x
 */
 
 /*
-    Copyright (c) 2024, GigaDevice Semiconductor Inc
+    Copyright (c) 2025, GigaDevice Semiconductor Inc.
 
     Redistribution and use in source and binary forms, with or without modification, 
 are permitted provided that the following conditions are met:
@@ -33,65 +33,51 @@ OF SUCH DAMAGE.
 */
 
 #include <gd32f30x.h>
-#include "gd32f303b_eval.h"
+#include "gd32f303c_eval.h"
 
 /* private variables */
-static uint32_t GPIO_PORT[LEDn] = {LED1_GPIO_PORT, LED2_GPIO_PORT,
-                                   LED3_GPIO_PORT, LED4_GPIO_PORT};
-static uint32_t GPIO_PIN[LEDn] = {LED1_PIN, LED2_PIN, LED3_PIN, LED4_PIN};
+static uint32_t GPIO_PORT[LEDn] = {LED2_GPIO_PORT, LED3_GPIO_PORT,
+                                   LED4_GPIO_PORT, LED5_GPIO_PORT};
+static uint32_t GPIO_PIN[LEDn] = {LED2_PIN, LED3_PIN, LED4_PIN, LED5_PIN};
 
-static rcu_periph_enum COM_CLK[COMn] = {EVAL_COM0_CLK};
-static uint32_t COM_TX_PIN[COMn] = {EVAL_COM0_TX_PIN};
-static uint32_t COM_RX_PIN[COMn] = {EVAL_COM0_RX_PIN};
-static uint32_t COM_GPIO_PORT[COMn] = {EVAL_COM0_GPIO_PORT};
-static rcu_periph_enum COM_GPIO_CLK[COMn] = {EVAL_COM0_GPIO_CLK};
+static rcu_periph_enum COM_CLK[COMn] = {EVAL_COM1_CLK, EVAL_COM2_CLK};
+static uint32_t COM_TX_PIN[COMn] = {EVAL_COM1_TX_PIN, EVAL_COM2_TX_PIN};
+static uint32_t COM_RX_PIN[COMn] = {EVAL_COM1_RX_PIN, EVAL_COM2_RX_PIN};
+static uint32_t COM_GPIO_PORT[COMn] = {EVAL_COM1_GPIO_PORT, EVAL_COM2_GPIO_PORT};
+static rcu_periph_enum COM_GPIO_CLK[COMn] = {EVAL_COM1_GPIO_CLK, EVAL_COM2_GPIO_CLK};
 
-static rcu_periph_enum GPIO_CLK[LEDn] = {LED1_GPIO_CLK,LED2_GPIO_CLK,
-                                        LED3_GPIO_CLK, LED4_GPIO_CLK };
+static rcu_periph_enum GPIO_CLK[LEDn] = {LED2_GPIO_CLK, LED3_GPIO_CLK, 
+                                         LED4_GPIO_CLK, LED5_GPIO_CLK};
 
-static uint32_t KEY_PORT[KEYn]            = {KEY_A_GPIO_PORT, 
-                                             KEY_B_GPIO_PORT,
-                                             KEY_C_GPIO_PORT,
-                                             KEY_D_GPIO_PORT,
-                                             KEY_CET_GPIO_PORT};
-static uint32_t KEY_PIN[KEYn]             = {KEY_A_PIN,
-                                             KEY_B_PIN,
-                                             KEY_C_PIN,
-                                             KEY_D_PIN,
-                                             KEY_CET_PIN};
-static rcu_periph_enum KEY_CLK[KEYn]      = {KEY_A_GPIO_CLK,
-                                             KEY_B_GPIO_CLK,
-                                             KEY_C_GPIO_CLK,
-                                             KEY_D_GPIO_CLK,
-                                             KEY_CET_GPIO_CLK};
-static exti_line_enum KEY_EXTI_LINE[KEYn] = {KEY_A_EXTI_LINE,
-                                             KEY_B_EXTI_LINE,
-                                             KEY_C_EXTI_LINE,
-                                             KEY_D_EXTI_LINE,
-                                             KEY_CET_EXTI_LINE};
-static uint8_t KEY_PORT_SOURCE[KEYn]      = {KEY_A_EXTI_PORT_SOURCE,
-                                             KEY_B_EXTI_PORT_SOURCE,
-                                             KEY_C_EXTI_PORT_SOURCE,
-                                             KEY_D_EXTI_PORT_SOURCE,
-                                             KEY_CET_EXTI_PORT_SOURCE};
-static uint8_t KEY_PIN_SOURCE[KEYn]       = {KEY_A_EXTI_PIN_SOURCE,
-                                             KEY_B_EXTI_PIN_SOURCE,
-                                             KEY_C_EXTI_PIN_SOURCE,
-                                             KEY_D_EXTI_PIN_SOURCE,
-                                             KEY_CET_EXTI_PIN_SOURCE};
-static IRQn_Type KEY_IRQn[KEYn]             = {KEY_A_EXTI_IRQn,
-                                             KEY_B_EXTI_IRQn,
-                                             KEY_C_EXTI_IRQn,
-                                             KEY_D_EXTI_IRQn,
-                                             KEY_CET_EXTI_IRQn};
+static uint32_t KEY_PORT[KEYn] = {WAKEUP_KEY_GPIO_PORT, 
+                                  TAMPER_KEY_GPIO_PORT,
+                                  USER_KEY_GPIO_PORT};
+static uint32_t KEY_PIN[KEYn] = {WAKEUP_KEY_PIN, 
+                                 TAMPER_KEY_PIN,
+                                 USER_KEY_PIN};
+static rcu_periph_enum KEY_CLK[KEYn] = {WAKEUP_KEY_GPIO_CLK, 
+                                        TAMPER_KEY_GPIO_CLK,
+                                        USER_KEY_GPIO_CLK};
+static exti_line_enum KEY_EXTI_LINE[KEYn] = {WAKEUP_KEY_EXTI_LINE,
+                                             TAMPER_KEY_EXTI_LINE,
+                                             USER_KEY_EXTI_LINE};
+static uint8_t KEY_PORT_SOURCE[KEYn] = {WAKEUP_KEY_EXTI_PORT_SOURCE,
+                                        TAMPER_KEY_EXTI_PORT_SOURCE,
+                                        USER_KEY_EXTI_PORT_SOURCE};
+static uint8_t KEY_PIN_SOURCE[KEYn] = {WAKEUP_KEY_EXTI_PIN_SOURCE,
+                                       TAMPER_KEY_EXTI_PIN_SOURCE,
+                                       USER_KEY_EXTI_PIN_SOURCE};
+static IRQn_Type KEY_IRQn[KEYn] = {WAKEUP_KEY_EXTI_IRQn, 
+                                 TAMPER_KEY_EXTI_IRQn,
+                                 USER_KEY_EXTI_IRQn};
 
 /*!
     \brief      configure led GPIO
     \param[in]  lednum: specify the led to be configured
-      \arg        LED1
       \arg        LED2
       \arg        LED3
       \arg        LED4
+      \arg        LED5
     \param[out] none
     \retval     none
 */
@@ -108,10 +94,10 @@ void  gd_eval_led_init (led_typedef_enum lednum)
 /*!
     \brief      turn on selected led
     \param[in]  lednum: specify the led to be turned on
-      \arg        LED1
       \arg        LED2
       \arg        LED3
       \arg        LED4
+      \arg        LED5
     \param[out] none
     \retval     none
 */
@@ -123,10 +109,10 @@ void gd_eval_led_on(led_typedef_enum lednum)
 /*!
     \brief      turn off selected led
     \param[in]  lednum: specify the led to be turned off
-      \arg        LED1
       \arg        LED2
       \arg        LED3
       \arg        LED4
+      \arg        LED5
     \param[out] none
     \retval     none
 */
@@ -138,10 +124,10 @@ void gd_eval_led_off(led_typedef_enum lednum)
 /*!
     \brief      toggle selected led
     \param[in]  lednum: specify the led to be toggled
-      \arg        LED1
       \arg        LED2
       \arg        LED3
       \arg        LED4
+      \arg        LED5
     \param[out] none
     \retval     none
 */
@@ -154,11 +140,9 @@ void gd_eval_led_toggle(led_typedef_enum lednum)
 /*!
     \brief      configure key
     \param[in]  key_num: specify the key to be configured
-      \arg        KEY_A: wakeup key
-      \arg        KEY_B: tamper key
-      \arg        KEY_C: user key
-      \arg        KEY_D: extension key
-      \arg        KEY_CET: extension key
+      \arg        KEY_TAMPER: tamper key
+      \arg        KEY_WAKEUP: wakeup key
+      \arg        KEY_USER: user key
     \param[in]  key_mode: specify button mode
       \arg        KEY_MODE_GPIO: key will be used as simple IO
       \arg        KEY_MODE_EXTI: key will be connected to EXTI line with interrupt
@@ -190,11 +174,9 @@ void gd_eval_key_init(key_typedef_enum key_num, keymode_typedef_enum key_mode)
 /*!
     \brief      return the selected key state
     \param[in]  key: specify the key to be checked
-      \arg        KEY_A: wakeup key
-      \arg        KEY_B: tamper key
-      \arg        KEY_C: user key
-      \arg        KEY_D: extension key
-      \arg        KEY_CET: extension key
+      \arg        KEY_TAMPER: tamper key
+      \arg        KEY_WAKEUP: wakeup key
+      \arg        KEY_USER: user key
     \param[out] none
     \retval     the key's GPIO pin value
 */
@@ -206,17 +188,18 @@ uint8_t gd_eval_key_state_get(key_typedef_enum key)
 /*!
     \brief      configure COM port
     \param[in]  com: COM on the board
-      \arg        EVAL_COM0: COM0 on the board
+      \arg        EVAL_COM1: COM1 on the board
+      \arg        EVAL_COM2: COM2 on the board
     \param[out] none
     \retval     none
 */
 void gd_eval_com_init(uint32_t com)
 {
     uint32_t com_id = 0U;
-    if(EVAL_COM0 == com){
+    if(EVAL_COM1 == com){
         com_id = 0U;
-    }else{
-        while(1);
+    }else if(EVAL_COM2 == com){
+        com_id = 1U;
     }
     
     /* enable GPIO clock */

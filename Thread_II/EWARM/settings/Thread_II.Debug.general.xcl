@@ -8,7 +8,7 @@
 
 --device_macro="D:\EIDE\IAR\arm/config/debugger/GD/GD32F30x.dmac" 
 
---flash_loader="D:\EIDE\IAR\arm/config/flashloader/GD/FlashGD32F303xB.board" 
+--flash_loader="D:\EIDE\IAR\arm/config/flashloader/GD/FlashGD32F303xC.board" 
 
 
 

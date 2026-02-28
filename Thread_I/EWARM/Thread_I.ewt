@@ -2856,6 +2856,9 @@
         <group>
             <name>User</name>
             <group>
+                <name>Algo</name>
+            </group>
+            <group>
                 <name>Core</name>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\gd32f303b_eval.c</name>

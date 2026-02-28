@@ -2,17 +2,17 @@
 
 "--cpu=Cortex-M4" 
 
-"--fpu=None" 
+"--fpu=VFPv4_SP" 
 
 "-p" 
 
-"D:\EIDE\IAR\arm\CONFIG\debugger\GD\GD32F303xB.ddf" 
+"D:\EIDE\IAR\arm\CONFIG\debugger\GD\GD32F303xC.ddf" 
 
 "--drv_verify_download" 
 
 "--semihosting" 
 
-"--device=GD32F303xB" 
+"--device=GD32F303xC" 
 
 "--drv_communication=USB0" 
 

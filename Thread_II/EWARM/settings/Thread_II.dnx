@@ -12,12 +12,21 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <PlDriver>
-        <MemConfigValue>D:\EIDE\IAR\arm\CONFIG\debugger\GD\GD32F303xB.ddf</MemConfigValue>
+        <MemConfigValue>D:\EIDE\IAR\arm\CONFIG\debugger\GD\GD32F303xC.ddf</MemConfigValue>
     </PlDriver>
     <ArmDriver>
-        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
         <EnableCache>0</EnableCache>
+        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
+        <Category2>_ 2</Category2>
+    </LogFile>
+    <JLinkDriver>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+        <CStepIntDis>_ 0</CStepIntDis>
+    </JLinkDriver>
     <DisassembleMode>
         <mode>0</mode>
     </DisassembleMode>
