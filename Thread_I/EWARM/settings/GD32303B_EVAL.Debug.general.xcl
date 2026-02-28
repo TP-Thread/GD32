@@ -1,0 +1,15 @@
+"D:\EIDE\IAR\arm\bin\armPROC.dll" 
+
+"D:\EIDE\IAR\arm\bin\armJLINK.dll" 
+
+"E:\RTOS\GD32\Application\EWARM\Debug\Exe\Project.out" 
+
+--plugin="D:\EIDE\IAR\arm\bin\armbat.dll" 
+
+--device_macro="D:\EIDE\IAR\arm/config/debugger/GD/GD32F30x.dmac" 
+
+--flash_loader="D:\EIDE\IAR\arm/config/flashloader/GD/FlashGD32F303xB.board" 
+
+
+
+

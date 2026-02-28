@@ -1,0 +1,339 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = D$:\EIDE\IAR\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++D$:\EIDE\IAR\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = D$:\EIDE\IAR\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++D$:\EIDE\IAR\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = D$:\EIDE\IAR\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++D$:\EIDE\IAR\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = D$:\EIDE\IAR\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++D$:\EIDE\IAR\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Core\Src\gd32f303b_eval.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Core\Src\gd32f303b_eval.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Application\User\Core --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f30x_it.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Core\Src\gd32f30x_it.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f30x_it.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f30x_it.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Core\Src\gd32f30x_it.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Application\User\Core --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f30x_it.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f30x_it.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Core\Src\main.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\main.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\main.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Core\Src\main.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Application\User\Core --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\main.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\main.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\system_gd32f30x.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Core\Src\system_gd32f30x.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\system_gd32f30x.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\system_gd32f30x.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Core\Src\system_gd32f30x.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Application\User\Core --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\system_gd32f30x.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\system_gd32f30x.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\systick.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Core\Src\systick.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\systick.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\systick.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Core\Src\systick.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Application\User\Core --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\systick.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\systick.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_adc.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_adc.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_adc.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_adc.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_adc.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_adc.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_adc.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_bkp.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_bkp.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_bkp.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_bkp.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_bkp.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_bkp.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_bkp.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_can.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_can.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_can.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_can.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_can.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_can.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_can.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_crc.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_crc.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_crc.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_crc.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_crc.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_crc.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_crc.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_ctc.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_ctc.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_ctc.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_ctc.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_ctc.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_ctc.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_ctc.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dac.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_dac.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dac.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dac.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_dac.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dac.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dac.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dbg.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_dbg.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dbg.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dbg.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_dbg.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dbg.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dbg.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dma.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_dma.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dma.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dma.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_dma.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dma.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dma.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_enet.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_enet.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_enet.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_enet.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_enet.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_enet.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_enet.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exmc.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_exmc.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exmc.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exmc.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_exmc.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exmc.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exmc.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exti.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_exti.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exti.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exti.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_exti.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exti.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exti.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fmc.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_fmc.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fmc.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fmc.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_fmc.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fmc.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fmc.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fwdgt.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_fwdgt.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fwdgt.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fwdgt.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_fwdgt.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fwdgt.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fwdgt.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_gpio.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_gpio.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_gpio.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_gpio.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_gpio.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_gpio.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_gpio.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_i2c.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_i2c.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_i2c.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_i2c.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_i2c.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_i2c.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_i2c.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_misc.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_misc.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_misc.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_misc.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_misc.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_misc.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_misc.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_pmu.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_pmu.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_pmu.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_pmu.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_pmu.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_pmu.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_pmu.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rcu.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_rcu.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rcu.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rcu.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_rcu.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rcu.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rcu.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rtc.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_rtc.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rtc.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rtc.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_rtc.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rtc.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rtc.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_sdio.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_sdio.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_sdio.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_sdio.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_sdio.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_sdio.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_sdio.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_spi.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_spi.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_spi.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_spi.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_spi.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_spi.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_spi.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_timer.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_timer.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_timer.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_timer.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_timer.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_timer.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_timer.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_usart.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_usart.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_usart.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_usart.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_usart.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_usart.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_usart.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_wwdgt.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_wwdgt.c -xcl_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_wwdgt.xcl -macro_file E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_wwdgt.tmp -icc_path D$:\EIDE\IAR\arm\bin\iccarm.exe
+  flags = E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_wwdgt.c -D USE_STDPERIPH_DRIVER -D GD32F30X_HD -o E$:\RTOS\GD32\Thread_I\EWARM\Debug\Obj\Drivers --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config D$:\EIDE\IAR\arm\inc\c\DLib_Config_Full.h -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\CMSIS\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\ -I E$:\RTOS\GD32\Thread_I\EWARM\..\Core\Inc\ -Ol -I D$:\EIDE\IAR\arm\CMSIS\Core\Include\ -I D$:\EIDE\IAR\arm\CMSIS\DSP\Include\ -D ARM_MATH_CM4 --predef_macros E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_wwdgt.tmp
+  rspfile_name = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_wwdgt.xcl.rsp
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.xcl |  $
+E$:\RTOS\GD32\Thread_I\Core\Src\gd32f303b_eval.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f30x_it.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f30x_it.xcl |  $
+E$:\RTOS\GD32\Thread_I\Core\Src\gd32f30x_it.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f30x_it.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f30x_it.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\main.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\main.xcl |  $
+E$:\RTOS\GD32\Thread_I\Core\Src\main.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\main.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\main.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\system_gd32f30x.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\system_gd32f30x.xcl |  $
+E$:\RTOS\GD32\Thread_I\Core\Src\system_gd32f30x.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\system_gd32f30x.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\system_gd32f30x.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\systick.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\systick.xcl |  $
+E$:\RTOS\GD32\Thread_I\Core\Src\systick.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\systick.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\systick.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_adc.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_adc.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_adc.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_adc.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_adc.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_bkp.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_bkp.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_bkp.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_bkp.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_bkp.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_can.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_can.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_can.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_can.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_can.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_crc.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_crc.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_crc.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_crc.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_crc.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_ctc.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_ctc.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_ctc.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_ctc.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_ctc.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dac.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dac.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_dac.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dac.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dac.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dbg.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dbg.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_dbg.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dbg.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dbg.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dma.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dma.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_dma.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dma.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dma.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_enet.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_enet.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_enet.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_enet.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_enet.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exmc.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exmc.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_exmc.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exmc.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exmc.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exti.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exti.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_exti.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exti.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exti.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fmc.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fmc.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_fmc.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fmc.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fmc.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fwdgt.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fwdgt.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_fwdgt.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fwdgt.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fwdgt.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_gpio.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_gpio.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_gpio.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_gpio.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_gpio.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_i2c.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_i2c.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_i2c.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_i2c.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_i2c.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_misc.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_misc.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_misc.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_misc.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_misc.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_pmu.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_pmu.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_pmu.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_pmu.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_pmu.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rcu.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rcu.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_rcu.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rcu.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rcu.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rtc.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rtc.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_rtc.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rtc.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rtc.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_sdio.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_sdio.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_sdio.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_sdio.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_sdio.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_spi.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_spi.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_spi.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_spi.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_spi.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_timer.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_timer.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_timer.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_timer.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_timer.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_usart.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_usart.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_usart.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_usart.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_usart.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_wwdgt.pbi : INDEXER E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_wwdgt.xcl |  $
+E$:\RTOS\GD32\Thread_I\Drivers\GD32F30x_standard_peripheral\Source\gd32f30x_wwdgt.c
+  flags = -out=E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_wwdgt.pbi -f E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_wwdgt.xcl
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I.pbw : MAKEBROWSE E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I.pbd
+  flags = E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I.pbd -output E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I.pbw
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part0.pbi : PDBLINK E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.pbi |  $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f30x_it.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\main.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\system_gd32f30x.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\systick.pbi
+  flags = -M E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part0.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f30x_it.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\main.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\system_gd32f30x.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Application\User\Core\systick.pbi
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part1.pbi : PDBLINK E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_adc.pbi |  $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_bkp.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_can.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_crc.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_ctc.pbi
+  flags = -M E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part1.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_adc.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_bkp.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_can.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_crc.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_ctc.pbi
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part2.pbi : PDBLINK E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dac.pbi |  $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dbg.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dma.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_enet.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exmc.pbi
+  flags = -M E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part2.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dac.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dbg.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_dma.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_enet.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exmc.pbi
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part3.pbi : PDBLINK E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exti.pbi |  $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fmc.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fwdgt.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_gpio.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_i2c.pbi
+  flags = -M E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part3.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_exti.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fmc.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_fwdgt.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_gpio.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_i2c.pbi
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part4.pbi : PDBLINK E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_misc.pbi |  $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_pmu.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rcu.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rtc.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_sdio.pbi
+  flags = -M E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part4.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_misc.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_pmu.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rcu.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_rtc.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_sdio.pbi
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part5.pbi : PDBLINK E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_spi.pbi |  $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_timer.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_usart.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_wwdgt.pbi
+  flags = -M E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part5.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_spi.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_timer.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_usart.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Drivers\gd32f30x_wwdgt.pbi
+
+build E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I.pbd : PDBLINK E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part0.pbi |  $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part1.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part2.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part3.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part4.pbi $
+E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part5.pbi
+  flags = -M E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I.pbd E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part0.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part1.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part2.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part3.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part4.pbi E$:\RTOS\GD32\Thread_I\EWARM\Debug\BrowseInfo\Thread_I_part5.pbi
+

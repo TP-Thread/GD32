@@ -1,0 +1,15 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\Application\\example\\USBD\\audio\\EWARM\\audio.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\Application\\example\\USBD\\audio\\EWARM\\audio.eww": {
+      "configs": {
+        "${workspaceFolder}\\Application\\example\\USBD\\audio\\EWARM\\audio.ewp": "USBD"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\Application\\example\\USBD\\audio\\EWARM\\audio.ewp"
+      }
+    }
+  }
+}
