@@ -1,14 +1,22 @@
 {
   "workspace": {
-    "path": "${workspaceFolder}\\Application\\example\\USBD\\audio\\EWARM\\audio.eww"
+    "path": "${workspaceFolder}\\Thread_II\\EWARM\\Thread_II.eww"
   },
   "workspaces": {
-    "${workspaceFolder}\\Application\\example\\USBD\\audio\\EWARM\\audio.eww": {
+    "${workspaceFolder}\\Thread_II\\EWARM\\Thread_II.eww": {
       "configs": {
-        "${workspaceFolder}\\Application\\example\\USBD\\audio\\EWARM\\audio.ewp": "USBD"
+        "${workspaceFolder}\\Thread_II\\EWARM\\Thread_II.ewp": "Debug"
       },
       "selected": {
-        "path": "${workspaceFolder}\\Application\\example\\USBD\\audio\\EWARM\\audio.ewp"
+        "path": "${workspaceFolder}\\Thread_II\\EWARM\\Thread_II.ewp"
+      }
+    },
+    "${workspaceFolder}\\Thread_I\\EWARM\\Thread_I.eww": {
+      "configs": {
+        "${workspaceFolder}\\Thread_I\\EWARM\\Thread_I.ewp": "Debug"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\Thread_I\\EWARM\\Thread_I.ewp"
       }
     }
   }

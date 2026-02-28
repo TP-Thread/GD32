@@ -1,5 +1,6 @@
 E:\RTOS\GD32\Thread_II\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_eval.pbi: \
   E:\RTOS\GD32\Thread_II\Core\Src\gd32f303b_eval.c \
+  E:\RTOS\GD32\Thread_II\EWARM\..\Core\Inc\main.h \
   E:\RTOS\GD32\Thread_II\EWARM\..\Core\Inc\gd32f30x.h \
   E:\RTOS\GD32\Thread_II\EWARM\..\Drivers\CMSIS\core_cm4.h \
   D:\EIDE\IAR\arm\inc\c\stdint.h D:\EIDE\IAR\arm\inc\c\ycheck.h \
@@ -14,6 +15,7 @@ E:\RTOS\GD32\Thread_II\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_ev
   E:\RTOS\GD32\Thread_II\EWARM\..\Core\Inc\system_gd32f30x.h \
   E:\RTOS\GD32\Thread_II\EWARM\..\Core\Inc\gd32f30x_libopt.h \
   E:\RTOS\GD32\Thread_II\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h \
+  E:\RTOS\GD32\Thread_II\EWARM\..\Core\Inc\gd32f30x.h \
   E:\RTOS\GD32\Thread_II\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h \
   E:\RTOS\GD32\Thread_II\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\gd32f30x_can.h \
   E:\RTOS\GD32\Thread_II\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h \
@@ -35,6 +37,4 @@ E:\RTOS\GD32\Thread_II\EWARM\Debug\BrowseInfo\Application\User\Core\gd32f303b_ev
   E:\RTOS\GD32\Thread_II\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h \
   E:\RTOS\GD32\Thread_II\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h \
   E:\RTOS\GD32\Thread_II\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h \
-  E:\RTOS\GD32\Thread_II\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h \
-  E:\RTOS\GD32\Thread_II\EWARM\..\Core\Inc\gd32f303b_eval.h \
-  E:\RTOS\GD32\Thread_II\EWARM\..\Core\Inc\gd32f30x.h
+  E:\RTOS\GD32\Thread_II\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h

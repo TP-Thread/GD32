@@ -32,8 +32,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
 */
 
+#include "main.h"
 #include "gd32f30x.h"
-#include "gd32f303b_eval.h"
 #include "systick.h"
 #include <stdio.h>
 
@@ -144,7 +144,7 @@ void led_flash(int times)
 /* retarget the C library printf function to the USART */
 int fputc(int ch, FILE *f)
 {
-    usart_data_transmit(EVAL_COM0, (uint8_t)ch);
-    while(RESET == usart_flag_get(EVAL_COM0, USART_FLAG_TBE));
+    usart_data_transmit(USART0, (uint8_t)ch);
+    while(RESET == usart_flag_get(USART0, USART_FLAG_TBE));
     return ch;
 }

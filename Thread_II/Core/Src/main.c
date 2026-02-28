@@ -1,150 +1,165 @@
-/*!
-    \file    main.c
-    \brief   USART printf
+/**
+ * @file main.c
+ * @author A-rtos (A-rtos@outlook.com)
+ * @brief Main program body
+ * @version 0.1
+ * @date 2026-02-28
+ *
+ * @copyright Copyright (c) 2026 A-rtos
+ *
+ */
 
-    \version 2025-08-20, V3.0.2, demo for GD32F30x
-*/
-
-/*
-    Copyright (c) 2025, GigaDevice Semiconductor Inc.
-
-    Redistribution and use in source and binary forms, with or without modification,
-are permitted provided that the following conditions are met:
-
-    1. Redistributions of source code must retain the above copyright notice, this
-       list of conditions and the following disclaimer.
-    2. Redistributions in binary form must reproduce the above copyright notice,
-       this list of conditions and the following disclaimer in the documentation
-       and/or other materials provided with the distribution.
-    3. Neither the name of the copyright holder nor the names of its contributors
-       may be used to endorse or promote products derived from this software without
-       specific prior written permission.
-
-    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
-INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
-NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
-PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
-OF SUCH DAMAGE.
-*/
-
-#include "gd32f30x.h"
-#include "gd32f303b_eval.h"
+#include "main.h"
 #include "systick.h"
 #include <stdio.h>
 
-void led_init(void);
-void led_flash(int times);
+/* Private variables ---------------------------------------------------------*/
 
-/*!
-    \brief      main function
-    \param[in]  none
-    \param[out] none
-    \retval     none
-*/
+/* Private function prototypes -----------------------------------------------*/
+static void gd_gpio_init(void);
+static void gd_uart0_init(void);
+// static void MX_DMA_Init(void);
+// static void MX_ADC2_Init(void);
+// static void MX_TIM1_Init(void);
+// static void MX_SPI3_Init(void);
+// static void MX_TIM2_Init(void);
+
+/* Private user code ---------------------------------------------------------*/
+/* retarget the C library printf function to the USART */
+int fputc(int ch, FILE *f)
+{
+    usart_data_transmit(USART0, (uint8_t)ch);
+    while (RESET == usart_flag_get(USART0, USART_FLAG_TBE))
+        ;
+    return ch;
+}
+
+/* retarget the C library printf function to the USART, in IAR __VER__ >= 9000000 environment */
+size_t __write(int handle, const unsigned char *buffer, size_t size)
+{
+    size_t nChars = 0;
+
+    for (; size != 0; --size)
+    {
+        usart_data_transmit(USART0, (uint8_t)*buffer++);
+        while (RESET == usart_flag_get(USART0, USART_FLAG_TBE))
+            ;
+        ++nChars;
+    }
+
+    return nChars;
+}
+
+/**
+  * @brief  The application entry point.
+  * @retval int
+  */
 int main(void)
 {
-    /* initialize the LEDs */
-    led_init();
-    
-    /* configure systick */
+    /* Configure systick */
     systick_config();
 
-    /* flash the LEDs for 1 time */
-    led_flash(1);
-
-    /* configure EVAL_COM1 */
-    gd_eval_com_init(EVAL_COM0);
+    /* Initialize all configured peripherals */
+    gd_gpio_init();
+    gd_uart0_init();
 
     /* configure TAMPER key */
     gd_eval_key_init(KEY_B, KEY_MODE_GPIO);
 
-    /* output a message on hyperterminal using printf function */
     printf("\r\n USART printf example: please press the KEY_B \r\n");
 
-    /* wait for completion of USART transmission */
-    while(RESET == usart_flag_get(EVAL_COM0, USART_FLAG_TC)){
-    }
-    while(1){
+    while (1)
+    {
         /* check if the tamper key is pressed */
-        if(RESET == gd_eval_key_state_get(KEY_B)){
-            delay_1ms(50);
-            if(RESET == gd_eval_key_state_get(KEY_B)){
-                delay_1ms(50);
-                if(RESET == gd_eval_key_state_get(KEY_B)){
-                    /* turn on LED2 */
-                    gd_eval_led_on(LED2);
-                    /* output a message on hyperterminal using printf function */
-                    printf("\r\n USART printf example \r\n");
-                    /* wait for completion of USART transmission */
-                    while(RESET == usart_flag_get(EVAL_COM0, USART_FLAG_TC)){
-                    }
-                }else{
-                    /* turn off LED2 */
-                    gd_eval_led_off(LED2);
-                }
-            }else{
-                /* turn off LED2 */
-                gd_eval_led_off(LED2);
-            }
-        }else{
-            /* turn off LED2 */
-            gd_eval_led_off(LED2);
-        }
+        // if (RESET == gd_eval_key_state_get(KEY_B))
+        // {
+        //     delay_1ms(50);
+        //     if (RESET == gd_eval_key_state_get(KEY_B))
+        //     {
+        //         delay_1ms(50);
+        //         if (RESET == gd_eval_key_state_get(KEY_B))
+        //         {
+        //             /* turn on LED2 */
+        //             led_b_on();
+        //             /* output a message on hyperterminal using printf function */
+        //             printf("\r\n USART printf example \r\n");
+        //             /* wait for completion of USART transmission */
+        //             while (RESET == usart_flag_get(USART0, USART_FLAG_TC))
+        //             {
+        //             }
+        //         }
+        //         else
+        //         {
+        //             /* turn off LED2 */
+        //             led_b_off();
+        //         }
+        //     }
+        //     else
+        //     {
+        //         /* turn off LED2 */
+        //         led_b_off();
+        //     }
+        // }
+        // else
+        // {
+        //     /* turn off LED2 */
+        //     led_b_off();
+        // }
+
+
+        delay_1ms(1000);
+        led_r_on();
+        delay_1ms(1000);
+        led_r_off();
+
     }
 }
 
-/*!
-    \brief      initialize the LEDs
-    \param[in]  none
-    \param[out] none
-    \retval     none
-*/
-void led_init(void)
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void gd_gpio_init(void)
 {
-    gd_eval_led_init(LED1);
-    gd_eval_led_init(LED2);
-    gd_eval_led_init(LED3);
-    gd_eval_led_init(LED4);
+    /* GPIO Ports Clock Enable */
+    rcu_periph_clock_enable(RCU_GPIOB);
+    rcu_periph_clock_enable(RCU_GPIOD);
+
+    /*Configure GPIO pins */
+    gpio_init(LED_B_GPIO_Port, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, LED_B_Pin);
+    gpio_init(LED_G_GPIO_Port, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, LED_G_Pin);
+    gpio_init(LED_R_GPIO_Port, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, LED_R_Pin);
+
+    /*Configure GPIO pin Output Level */
+    gpio_bit_set(LED_B_GPIO_Port, LED_B_Pin);
+    gpio_bit_set(LED_G_GPIO_Port, LED_G_Pin);
+    gpio_bit_set(LED_R_GPIO_Port, LED_R_Pin);
 }
 
-/*!
-    \brief      flash the LEDs for test
-    \param[in]  times: times to flash the LEDs
-    \param[out] none
-    \retval     none
-*/
-void led_flash(int times)
+/**
+  * @brief UART0 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void gd_uart0_init(void)
 {
-    int i;
-    for(i=0; i<times; i++){
-        /* delay 400 ms */
-        delay_1ms(400);
+    /* enable GPIO clock */
+    rcu_periph_clock_enable(RCU_GPIOA);
 
-        /* turn on LEDs */
-        gd_eval_led_on(LED1);
-        gd_eval_led_on(LED2);
-        gd_eval_led_on(LED3);
-        gd_eval_led_on(LED4);
+    /* enable USART clock */
+    rcu_periph_clock_enable(RCU_USART0);
 
-        /* delay 400 ms */
-        delay_1ms(400);
-        /* turn off LEDs */
-        gd_eval_led_off(LED1);
-        gd_eval_led_off(LED2);
-        gd_eval_led_off(LED3);
-        gd_eval_led_off(LED4);
-    }
-}
+    /* connect port to USARTx_Tx */
+    gpio_init(GPIOA, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_9);
 
-/* retarget the C library printf function to the USART */
-int fputc(int ch, FILE *f)
-{
-    usart_data_transmit(EVAL_COM0, (uint8_t)ch);
-    while(RESET == usart_flag_get(EVAL_COM0, USART_FLAG_TBE));
-    return ch;
+    /* connect port to USARTx_Rx */
+    gpio_init(GPIOA, GPIO_MODE_IN_FLOATING, GPIO_OSPEED_50MHZ, GPIO_PIN_10);
+
+    /* USART configure */
+    usart_deinit(USART0);
+    usart_baudrate_set(USART0, 115200U);
+    usart_receive_config(USART0, USART_RECEIVE_ENABLE);
+    usart_transmit_config(USART0, USART_TRANSMIT_ENABLE);
+    usart_enable(USART0);
 }
