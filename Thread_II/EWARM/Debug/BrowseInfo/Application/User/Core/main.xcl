@@ -17,6 +17,8 @@ E:\RTOS\GD32\Thread_II\EWARM\..\Drivers\GD32F30x_standard_peripheral\Include
 -I
 E:\RTOS\GD32\Thread_II\EWARM\..\Core\Inc
 -I
+E:\RTOS\GD32\Thread_II\EWARM\..\Bsp\Drv\Inc
+-I
 D:\EIDE\IAR\arm\CMSIS\Core\Include
 -I
 D:\EIDE\IAR\arm\CMSIS\DSP\Include
@@ -32,6 +34,8 @@ E:\RTOS\GD32\Thread_II\Drivers\CMSIS
 E:\RTOS\GD32\Thread_II\Drivers\GD32F30x_standard_peripheral\Include
 -I
 E:\RTOS\GD32\Thread_II\Core\Inc
+-I
+E:\RTOS\GD32\Thread_II\Bsp\Drv\Inc
 -I
 D:\EIDE\IAR\arm\CMSIS\Core\Include
 -I

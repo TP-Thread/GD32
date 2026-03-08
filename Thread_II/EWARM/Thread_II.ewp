@@ -347,6 +347,7 @@
                     <state>$PROJ_DIR$\..\Drivers\CMSIS</state>
                     <state>$PROJ_DIR$\..\Drivers\GD32F30x_standard_peripheral\Include</state>
                     <state>$PROJ_DIR$\..\Core\Inc</state>
+                    <state>$PROJ_DIR$\..\Bsp\Drv\Inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2177,6 +2178,9 @@
             </group>
             <group>
                 <name>Drv</name>
+                <file>
+                    <name>$PROJ_DIR$\..\Bsp\Drv\Src\drv_flash.c</name>
+                </file>
             </group>
             <group>
                 <name>Prot</name>

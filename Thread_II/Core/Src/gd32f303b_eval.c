@@ -7,13 +7,6 @@
 
 #include "main.h"
 
-
-static rcu_periph_enum COM_CLK[COMn] = {EVAL_COM0_CLK};
-static uint32_t COM_TX_PIN[COMn] = {EVAL_COM0_TX_PIN};
-static uint32_t COM_RX_PIN[COMn] = {EVAL_COM0_RX_PIN};
-static uint32_t COM_GPIO_PORT[COMn] = {EVAL_COM0_GPIO_PORT};
-static rcu_periph_enum COM_GPIO_CLK[COMn] = {EVAL_COM0_GPIO_CLK};
-
 static uint32_t KEY_PORT[KEYn]            = {KEY_A_GPIO_PORT, 
                                              KEY_B_GPIO_PORT,
                                              KEY_C_GPIO_PORT,

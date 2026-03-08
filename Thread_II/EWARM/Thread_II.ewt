@@ -2878,6 +2878,9 @@
             </group>
             <group>
                 <name>Drv</name>
+                <file>
+                    <name>$PROJ_DIR$\..\Bsp\Drv\Src\drv_flash.c</name>
+                </file>
             </group>
             <group>
                 <name>Prot</name>
